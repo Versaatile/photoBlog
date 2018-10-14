@@ -1,0 +1,66 @@
+@import '../../../styles.scss';
+
+
+.loaderContainer {
+  background-color: $backgroundColor;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.loaderContainerContent {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loaderContainerText {
+  font-size: 10vh;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+.closedAnimationStyle {
+  opacity: 1;
+  transform: 'matrix(0.866,0.5,-0.5,0.866,0,0)';
+  color: 'black';
+}
+
+.lineAnimationContainer{
+  width: 200px;
+}
+
+.loaderContainerLineContainerWhite{
+  position: absolute;
+  left: 0;
+}
+
+.loaderContainerLineWhite {
+  stroke:rgba(255,255,255,1);stroke-width:2;
+}
+
+.loaderContainerLineContainerGray{
+  position: absolute;
+  left: 0;
+}
+
+.loaderContainerLineGrey {
+  stroke:rgba(255,255,255,0.5);stroke-width:2;
+  top: 20;
+}
+
+.loaderContainerLineContainerWhiteBack{
+  position: absolute;
+  left: 0;
+}
+
+.loaderContainerLineWhiteBack {
+  stroke:rgba(255,255,255,1);stroke-width:2;
+  top: 20;
+}
+
+

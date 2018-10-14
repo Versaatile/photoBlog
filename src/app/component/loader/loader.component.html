@@ -1,0 +1,20 @@
+<div class="loaderContainer">
+  <div class="loaderContainerContent">
+    <div [@text]="triggerText ? 'open' : 'closed'" class="open-close-container" (@text.done)="textAnimationDone($event)">
+      <p class='loaderContainerText'>Blog</p>
+    </div>
+    <div class="lineAnimationContainer">
+      <svg height="2" width="200" [@line]="triggerLine ? 'open' : 'closed'" class="loaderContainerLineContainerWhite"
+        (@line.done)="lineAnimationDone($event)" *ngIf="displayfirstLine">
+        <line x1="200" y1="0" x2="0" y2="0" class="loaderContainerLineWhite" />
+      </svg>
+      <svg height="2" width="200" class="loaderContainerLineContainerGray" *ngIf="displayfirstLine">
+        <line x1="200" y1="0" x2="0" y2="0" class="loaderContainerLineGrey" />
+      </svg>
+      <svg height="2" width="200" class="loaderContainerLineContainerWhiteBack" [@backline]="!displayfirstLine ? 'open' : 'closed'">
+        <line x1="200" y1="0" x2="0" y2="0" class="loaderContainerLineWhiteBack" *ngIf="!displayfirstLine" />
+      </svg>
+    </div>
+
+  </div>
+</div>
