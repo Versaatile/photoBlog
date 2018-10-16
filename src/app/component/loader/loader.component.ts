@@ -21,7 +21,7 @@ import {
 
       state('closed', style({
         opacity: 1,
-        transform: 'rotate(-30deg) translateY(-50px)',
+        transform: 'rotate(-20deg) translateY(-10vh)',
         transformOrigin: 'bottom left',
         color: 'white',
       })),
@@ -43,13 +43,13 @@ import {
 
       state('open', style({
         opacity: 1,
-        transform: 'rotate(30deg) translateY(100px)',
+        transform: 'rotate(20deg) translateY(10vh)',
         transformOrigin: 'bottom left',
         color: 'white',
       })),
 
       transition('closed => open', [
-        animate('0.5s 1.5s ease-in'),
+        animate('0.5s ease-in'),
       ]),
 
       transition('open => closed', [
@@ -92,7 +92,7 @@ import {
     trigger('backline', [
       state('open', style({
         opacity: 1,
-        transform: 'translateX(1000px)',
+        transform: 'translateX(50vw)',
       })),
 
       state('closed', style({
@@ -100,7 +100,7 @@ import {
       })),
 
       transition('closed => open', [
-        animate('0.5s 1.8s ease-in'),
+        animate('0.5s ease-in'),
       ]),
 
       transition('open => closed', [
@@ -145,16 +145,21 @@ export class LoaderComponent implements OnInit {
   }
 
   public lineAnimationDone(event) {
-    console.log(event);
     if (event.fromState === 'closed') {
       this.displayfirstLine = !this.displayfirstLine;
       this.triggerText = !this.triggerText;
-      this.triggerTextBack = !this.triggerTextBack;
+    }
+  }
 
+  public backLineAnimationDone(event) {
+    if (event.fromState === 'closed') {
+      this.triggerTextBack = !this.triggerTextBack;
     }
   }
 
 }
+
+
 
 
 /*

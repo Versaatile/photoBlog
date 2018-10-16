@@ -9,16 +9,17 @@
         <p class='loaderContainerText'>{{text}}</p>
       </div>
       <div class="lineAnimationContainer">
-        <svg height="2" width="100%" [@line]="triggerLine ? 'open' : 'closed'" class="loaderContainerLineContainerWhite"
+        <svg height="20" width="100%" [@line]="triggerLine ? 'open' : 'closed'" class="loaderContainerLineContainerWhite"
           (@line.done)="lineAnimationDone($event)" *ngIf="displayfirstLine">
-          <line x1="1000" y1="0" x2="0" y2="0" class="loaderContainerLineWhite" />
+          <line x1="1000" y1="10" x2="0" y2="0" class="loaderContainerLineWhite" />
         </svg>
-        <svg height="2" width="100%" [@firstLine]="triggerFirstLine ? 'open' : 'closed'" class="loaderContainerLineContainerGray"
+        <svg height="20" width="100%" [@firstLine]="triggerFirstLine ? 'open' : 'closed'" class="loaderContainerLineContainerGray"
           *ngIf="displayfirstLine" (@firstLine.done)="firstLineAnimationDone($event)">
-          <line x1="1000" y1="0" x2="0" y2="0" class="loaderContainerLineGrey" />
+          <line x1="1000" y1="10" x2="0" y2="0" class="loaderContainerLineGrey" />
         </svg>
-        <svg height="2" width="100%" class="loaderContainerLineContainerWhiteBack" [@backline]="!displayfirstLine ? 'open' : 'closed'">
-          <line x1="1000" y1="0" x2="0" y2="0" class="loaderContainerLineWhiteBack" *ngIf="!displayfirstLine" />
+        <svg height="20" width="100%" class="loaderContainerLineContainerWhiteBack" [@backline]="!displayfirstLine ? 'open' : 'closed'"
+          (@backline.done)="backLineAnimationDone($event)">
+          <line x1="1000" y1="10" x2="0" y2="0" class="loaderContainerLineWhiteBack" *ngIf="!displayfirstLine" />
         </svg>
       </div>
     </div>

@@ -9,7 +9,6 @@
   width: 100%;
   height: 100%;
   margin: 0;
-  overflow: hidden;
 
 }
 
@@ -18,7 +17,7 @@
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-
+  overflow: hidden;
 }
 
 .textAnimationContainer {
@@ -37,11 +36,11 @@
 }
 
 .lineAnimationContainer{
+  height: 1vh;
 }
 
 .loaderContainerLineContainerWhite{
-  position: absolute;
-  left: 0;
+  position: fixed;
 }
 
 .loaderContainerLineWhite {
@@ -49,8 +48,7 @@
 }
 
 .loaderContainerLineContainerGray{
-  position: absolute;
-  left: 0;
+  position: fixed;
 
 }
 
@@ -59,8 +57,7 @@
 }
 
 .loaderContainerLineContainerWhiteBack{
-  position: absolute;
-  left: 0;
+  position: fixed;
 }
 
 .loaderContainerLineWhiteBack {
