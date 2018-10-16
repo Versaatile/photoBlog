@@ -8,7 +8,7 @@ import { LoaderComponent } from './component/loader/loader.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LoaderComponent
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,

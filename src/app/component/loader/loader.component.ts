@@ -14,96 +14,54 @@ import {
   styleUrls: ['./loader.component.scss'],
   animations: [
     trigger('text', [
-      state('open', style({
-        opacity: 1,
-        color: 'white',
-      })),
-
       state('closed', style({
-        opacity: 1,
         transform: 'rotate(-20deg) translateY(-10vh)',
         transformOrigin: 'bottom left',
-        color: 'white',
       })),
 
-      transition('closed => open', [
-        animate('0.5s ease-in')
-      ]),
-
-      transition('open => closed', [
+      transition('closed => *', [
         animate('0.5s ease-in')
       ]),
     ]),
 
     trigger('textBack', [
-      state('closed', style({
-        opacity: 1,
-        color: 'white',
-      })),
 
       state('open', style({
-        opacity: 1,
         transform: 'rotate(20deg) translateY(10vh)',
         transformOrigin: 'bottom left',
-        color: 'white',
       })),
 
       transition('closed => open', [
         animate('0.5s ease-in'),
       ]),
-
-      transition('open => closed', [
-        animate('0.5s ease-in')
-      ]),
     ]),
 
-
     trigger('firstLine', [
-      state('open', style({
-        opacity: 1,
-      })),
-
       state('closed', style({
-        opacity: 1,
         width: 0,
       })),
 
-      transition('closed => open', [
+      transition('closed => *', [
         animate('0.5s ease-out'),
       ]),
     ]),
 
-
     trigger('line', [
-      state('open', style({
-        opacity: 1,
-      })),
-
       state('closed', style({
-        opacity: 1,
         width: 0,
       })),
 
-      transition('closed => open', [
+      transition('closed => *', [
         animate('0.5s ease-out'),
       ]),
     ]),
 
     trigger('backline', [
       state('open', style({
-        opacity: 1,
         transform: 'translateX(50vw)',
       })),
 
-      state('closed', style({
-        opacity: 1,
-      })),
-
-      transition('closed => open', [
-        animate('0.5s ease-in'),
-      ]),
-
-      transition('open => closed', [
+      transition('* => open', [
         animate('0.5s ease-in'),
       ]),
     ])]
@@ -152,36 +110,10 @@ export class LoaderComponent implements OnInit {
   }
 
   public backLineAnimationDone(event) {
+    console.log(event);
     if (event.fromState === 'closed') {
       this.triggerTextBack = !this.triggerTextBack;
     }
   }
 
 }
-
-
-
-
-/*
-   trigger('line', [
-
-      state('open', style({
-        opacity: 1,
-        color: 'white',
-      })),
-
-      state('closed', style({
-        opacity: 1,
-        width: 0,
-        color: 'white'
-      })),
-
-      transition('closed => open', [
-        animate('0.7s'),
-      ]),
-
-      transition('open => closed', [
-        animate('0.7s')
-      ]),
-    ]),
-*/

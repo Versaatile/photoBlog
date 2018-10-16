@@ -26,42 +26,44 @@
 
 .loaderContainerText {
   font-size: 5vh;
+  color: $textColorLight;
+  font-weight: 600;
   margin-bottom: 0;
-}
-
-.closedAnimationStyle {
   opacity: 1;
-  transform: 'matrix(0.866,0.5,-0.5,0.866,0,0)';
-  color: 'black';
 }
 
 .lineAnimationContainer{
-  height: 1vh;
+  height: 3vh;
 }
 
 .loaderContainerLineContainerWhite{
   position: fixed;
+  bottom: 0;
 }
 
 .loaderContainerLineWhite {
-  stroke:rgba(255,255,255,1);stroke-width:2;
+  stroke:rgba(231,231,231,1);
+  stroke-width:3;
 }
 
 .loaderContainerLineContainerGray{
   position: fixed;
-
+  bottom: 0;
 }
 
 .loaderContainerLineGrey {
-  stroke:rgba(255,255,255,0.5);stroke-width:2;
+  stroke:rgba(231,231,231,0.5);
+  stroke-width:3;
 }
 
 .loaderContainerLineContainerWhiteBack{
   position: fixed;
+  bottom: 0;
 }
 
 .loaderContainerLineWhiteBack {
-  stroke:rgba(255,255,255,1);stroke-width:2;
+  stroke:rgba(231,231,231,1);
+  stroke-width:3;
 }
 
 
