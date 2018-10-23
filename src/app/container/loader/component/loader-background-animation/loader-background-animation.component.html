@@ -1,0 +1,14 @@
+<div>
+  <div class="stripContainer" [@strip]="triggerStrip[0] ? 'open' : 'closed'">
+    <canvas #layoutOne [width]="stripWidth" [height]="stripHeight" class="backgroundStrip"></canvas>
+  </div>
+  <div class="stripContainer" [@strip]="triggerStrip[1] ? 'open' : 'closed'">
+    <canvas #layoutTwo [width]="stripWidth" [height]="stripHeight" class="backgroundStrip"></canvas>
+  </div>
+  <div class="stripContainer" [@strip]="triggerStrip[2] ? 'open' : 'closed'">
+    <canvas #layoutThree [width]="stripWidth" [height]="stripHeight" class="backgroundStrip"></canvas>
+  </div>
+  <div class="stripContainer" [@strip]="triggerStrip[3] ? 'open' : 'closed'">
+    <canvas #layoutFour [width]="stripWidth" [height]="stripHeight" class="backgroundStrip"></canvas>
+  </div>
+</div>

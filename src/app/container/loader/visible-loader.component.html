@@ -1,0 +1,6 @@
+<div class="loaderContainer">
+  <div class="loaderContainer backgroundAnimation">
+    <app-loader-background-animation [nbOfStrip]="4" [triggerBackground]="triggerBackground"></app-loader-background-animation>
+  </div>
+  <app-loader-text-animation (finished)="firstAnimationFinished($event)"></app-loader-text-animation>
+</div>

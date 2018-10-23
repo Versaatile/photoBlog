@@ -1,0 +1,25 @@
+<div class="TextContainerContent">
+  <div class="textAnimationContainer">
+    <div [@text]="triggerText ? 'open' : 'closed'" class="open-close-container" (@text.done)="textAnimationDone($event)"
+      *ngIf="displayfirstText">
+      <p class='textContainerText'>{{text}}</p>
+    </div>
+    <div [@textBack]="triggerTextBack ? 'open' : 'closed'" class="open-close-container" *ngIf="!displayfirstText">
+      <p class='textContainerText'>{{text}}</p>
+    </div>
+    <div class="lineAnimationContainer">
+      <svg height="20" width="100vw" [@line]="triggerLine ? 'open' : 'closed'" class="textContainerLineContainerWhite"
+        (@line.done)="lineAnimationDone($event)" *ngIf="displayfirstLine">
+        <line x1="100vw" y1="0" x2="0" y2="0" class="textContainerLineWhite" />
+      </svg>
+      <svg height="20" width="100vw" [@firstLine]="triggerFirstLine ? 'open' : 'closed'" class="textContainerLineContainerGray"
+        *ngIf="displayfirstLine" (@firstLine.done)="firstLineAnimationDone($event)">
+        <line x1="100vw" y1="0" x2="0" y2="0" class="textContainerLineGrey" />
+      </svg>
+      <svg height="20" width="100vw" class="textContainerLineContainerWhiteBack" [@backline]="!displayfirstLine ? 'open' : 'closed'"
+        (@backline.done)="backLineAnimationDone($event)">
+        <line x1="100vw" y1="0" x2="0" y2="0" class="textContainerLineWhiteBack" *ngIf="!displayfirstLine" />
+      </svg>
+    </div>
+  </div>
+</div>

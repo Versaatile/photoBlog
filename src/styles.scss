@@ -2,8 +2,10 @@
 $primaryColor : #FFFFFF;
 $textColorLight : #E7E7E7E7;
 $backgroundColor : #141414;
+$black: #000000;
 $font-stack :    Helvetica, sans-serif;
 
 html {
   font-family: "Impact, Charcoal, sans-serif";
+  background-color: $backgroundColor;
 }

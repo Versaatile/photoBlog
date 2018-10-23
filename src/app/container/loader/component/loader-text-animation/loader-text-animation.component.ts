@@ -1,4 +1,4 @@
-import { Component, HostBinding, OnInit, AfterViewInit, DoCheck } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 import {
   trigger,
   state,
@@ -9,9 +9,9 @@ import {
 
 
 @Component({
-  selector: 'app-loader',
-  templateUrl: './loader.component.html',
-  styleUrls: ['./loader.component.scss'],
+  selector: 'app-loader-text-animation',
+  templateUrl: './loader-text-animation.component.html',
+  styleUrls: ['./loader-text-animation.component.scss'],
   animations: [
     trigger('text', [
       state('closed', style({
@@ -67,7 +67,7 @@ import {
     ])]
 })
 
-export class LoaderComponent implements OnInit {
+export class LoaderTextAnimationComponent implements OnInit {
   public triggerText = false;
   public triggerTextBack = false;
   public triggerFirstLine = false;
@@ -79,7 +79,7 @@ export class LoaderComponent implements OnInit {
 
   public text: String = 'Fenrir\'s photo';
 
-
+  @Output() finished = new EventEmitter();
 
   constructor() { }
 
@@ -113,6 +113,7 @@ export class LoaderComponent implements OnInit {
     console.log(event);
     if (event.fromState === 'closed') {
       this.triggerTextBack = !this.triggerTextBack;
+      this.finished.emit(true);
     }
   }
 

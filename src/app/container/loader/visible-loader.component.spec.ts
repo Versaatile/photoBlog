@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LoaderComponent } from './loader.component';
+import { VisibleLoaderComponent } from './visible-loader.component';
 
-describe('LoaderComponent', () => {
-  let component: LoaderComponent;
-  let fixture: ComponentFixture<LoaderComponent>;
+describe('VisibleLoaderComponent', () => {
+  let component: VisibleLoaderComponent;
+  let fixture: ComponentFixture<VisibleLoaderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoaderComponent ]
+      declarations: [ VisibleLoaderComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LoaderComponent);
+    fixture = TestBed.createComponent(VisibleLoaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
