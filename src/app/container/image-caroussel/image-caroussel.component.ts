@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
   selector: 'app-image-caroussel',
   templateUrl: './image-caroussel.component.html',
-  styleUrls: ['./image-caroussel.component.scss']
+  styleUrls: ['./image-caroussel.component.scss'],
 })
 export class ImageCarousselComponent implements OnInit {
 
@@ -20,3 +22,6 @@ export class ImageCarousselComponent implements OnInit {
   }
 
 }
+
+
+
