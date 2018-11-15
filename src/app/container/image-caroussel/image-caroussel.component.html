@@ -1,13 +1,10 @@
-<div class="CarouselContainer">
-  <ngb-carousel *ngIf="images">
+<ngb-carousel *ngIf="images" [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
+  <div (mousedown)="carouselMouseDown($event)" (mouseup)="carouselMouseUp()" class="containerContainer">
     <ng-template ngbSlide *ngFor="let image of images">
-      <span class="ImageFrame">
-        <img [src]="image" alt="Random first slide" class="myImg">
-      </span>
-      <div class="carousel-caption">
-        <h3>First slide label</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      <div class="ImageFrame" [ngClass]="{'oldImage': oldActive}">
+        <img [src]="image" alt="Random first slide" class="myImg" [ngClass]="{'oldImageFrame': oldActive}">
       </div>
     </ng-template>
-  </ngb-carousel>
-</div>
+  </div>
+
+</ngb-carousel>

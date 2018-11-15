@@ -1,14 +1,22 @@
+.containerContainer{
+  width: 100vw;
+  height: 100vh;
+}
+
 .myImg {
-  height: 50px;
-  width: 50px;
+  width: 50vw;
 }
 
 .ImageFrame{
+  align-items: center;
+}
+
+.imagesWrapper{
 
 }
 
 
-.myImg:hover {
+.oldImage {
   top: 10%;
   bottom: 10%;
   right: -5%;
@@ -16,12 +24,7 @@
   border-radius: 5% / 50%;
 }
 
-.ImageFrame :hover{
+.oldImageFrame{
   margin: 20px 10px;
   border-radius: 50% / 10%;
-}
-
-.CarouselContainer {
-  height: 75%;
-  width: 75%;
 }
